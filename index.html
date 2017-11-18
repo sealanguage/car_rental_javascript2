@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Rental 2</title>
+</head>
+<body>
+    <div>
+    <h1>Rent a Car</h1>
+    <form id="xxxxx">
+        <input type="text" id="firstname" firstName="firstName" value="first name"><br>
+        <input type="text" id="lastname" lastName="lastName" value="last name"><br>
+   </form>
+   <div>
+        <p>Car type:<br>
+<!--  Dropdown to select car type.  -->
+        <select id="models" name="models" onchange="priceAvail ()">
+            <option id="choose" value="choose">Choose</option>
+            <option id="volvo" value="volvo" >Volvo $50</option>
+            <option id="saab" value="saab">Saab $60</option>
+        </select>
+        </p>
+     </div>
+     
+    <div>
+        <button id="rentButton">Rent this Car</button>
+    </div>
+   
+    <div style="border: 1px solid #000">  
+        <p>this is where price will be</p>
+        <p id="available"></p>
+        <p id="price"></p>
+    </div>
+
+    
+    <script>
+    var car = {  
+       volvo: "volvo", 
+       vprice: "$50", 
+       vAvail: 5,
+       vbooked: 0,
+   
+        saab : "saab" 
+        sprice: "$75", 
+        sAvail: 4,
+        sbooked: 0,
+    
+    function getCars() {
+        getElementById("volvo").innerHTML = car.vavail;
+        getElementById("saab").innerHTML = car.sprice;
+    }
+    
+    function volvoAvail () {
+        return this.vAvail - vbooked; 
+    };
+    function saabAvail () {
+        return this.sAvail - sbooked;
+    };
+    
+    
+    
+    
+    }
+    function rent () {
+        this
+        
+    }
+    /*  
+    function priceAvail () {
+            //what car?
+            var models = document.getElementByID("models").value;
+            
+            //how many available?
+            //show price
+            switch(models) {
+                case "volvo":
+                    document.getElementById("available").innerHTML = this.volvo.numberAvail;
+                    document.getElementById("price").innerHTML = car.volvo.price;
+                break;
+                    
+                case "saab":
+                    document.getElementById("available").innerHTML = car.saab.numberAvail;
+                    document.getElementById("price").innerHTML = car.saab.price;
+                break;
+                   
+                   case "fiat":
+                    document.getElementById("available").innerHTML = car.fiat.numberAvail;
+                    document.getElementById("price").innerHTML = car.fiat.price;
+                break;
+                    
+                case "audi":
+                     document.getElementById("available").innerHTML = carRental.audi.numberAvail;
+                    document.getElementById("price").innerHTML = carRental.audi.price;
+                break;
+            };
+        };
+        */
+};
+        
+    </script>
+</body>
+</html>
+
+<!-- 
+ getAvgGrade: function(classNum) {
+        // grab the students array from the class number given.
+        var theStudents = this.classes[classNum].students; //fill out dot notation
+        var total = 0
+        for(var i = 0; i < theStudents.length; i++) {
+            // we need to get the grade of each student. what Item do we use here?
+            // console.log(theStudents[i].grade);
+            total += theStudents[i].grade;
+        }
+        return total / theStudents.length;
+    }
+ 2 objects
+Car rental
+Rental - name of renter & car type
+
+Site should have form
+    Form contains:
+        Text field input Renter name
+        Dropdown to select car type.
+
+    Selecting cartype should:
+        Display # available
+        Display cartype’s price
+
+Button to rent car should:
+Not work if renter name empty or car not selected or no cars available
+If valid add the Name and car type to rent object
+
+-->
